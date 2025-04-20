@@ -1,17 +1,17 @@
 <?php
-session_start();
-include 'db.php';
+session_start(); 
+include 'db.php'; // saves us from writing the database again 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
+    $username = $_POST['username']; // grabbing user details from the form like
     $password = $_POST['password'];
 
-    $query = "SELECT * FROM users WHERE username='$username'";
-    $result = mysqli_query($conn, $query);
-    $user = mysqli_fetch_assoc($result);
+    $query = "SELECT * FROM users WHERE username='$username'"; // preparing sql query to find user in users table [if that he actually exists or not]
+    $result = mysqli_query($conn, $query); // send query to database to fetch result
+    $user = mysqli_fetch_assoc($result); // storing username so we can compare password
 
-    if ($user && $password === $user['password']) {
-        $_SESSION['user'] = $username;
+    if ($user && $password === $user['password']) {  // if username exists now we will check for password if it matches then
+        $_SESSION['user'] = $username; 
         header("Location: dashboard.php");
         exit;
     } else {
