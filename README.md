@@ -1,32 +1,27 @@
-# 🏥 Clinic Management System
+# Clinic Management System
 
 The **Clinic Management System** is a lightweight PHP-MySQL web application designed to streamline and digitalize clinic operations. It supports multiple user roles including admins, doctors, and patients with separate dashboards and role-based access.
 
-## 🌐 Features
+##  Features
 
-### 👨‍⚕️ Admin
+### Admin/DOC
 - Register new patients, doctors, and medicines
 - View, edit, and delete patient/doctor/medicine records
-- Assign appointments and medications
+- Assign appointments
 - Add remarks to patient profiles
 
-### 🧑‍⚕️ Doctor
-- View assigned patients
-- Add medical remarks and prescriptions
-- Review appointment history
-
-### 👤 Patient
+###  Patient
 - Login using name + contact for simplified access
 - View appointment history and doctor remarks
 - Secure session management
 
-### 🔐 Authentication
+###  Authentication
 - Role-based login for Admin, Doctor, and Patient
 - Optional patient registration protected with a code (e.g., `5743`) to prevent spam
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 - **Backend:** PHP 7+, MySQLi
 - **Frontend:** HTML, CSS
