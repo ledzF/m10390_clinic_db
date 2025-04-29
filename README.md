@@ -35,9 +35,32 @@ The **Clinic Management System** is a lightweight PHP-MySQL web application desi
 
 ---
 
-## 🚀 Getting Started
+### 🚀 Getting Started
 
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/yourusername/clinic-management-system.git
 cd clinic-management-system
+```
+---
+
+2. *Import the Database*
+
+~ Open phpMyAdmin or any MySQL client
+
+~ Create a database, e.g., clinic_db.
+
+__Import the SQL file provided in the /database/ directory.__
+
+Configure Database
+
+Open db.php and update your DB credentials:
+
+```php
+$conn = mysqli_connect("localhost", "root", "", "clinic_db");
+```
+- Run the App
+
+- Use a local server like XAMPP/WAMP/LAMP
+
+- Visit: http://localhost/clinic-management-system/
