@@ -33,7 +33,5 @@ VALUES (
   'admin@example.com'
 );
 
-INSERT INTO users (username, password, role, email)
-VALUES (
-  'patient1',  'patient123', 'patient', 'patient1@example.com'
-);
+
+
