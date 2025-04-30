@@ -10,6 +10,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "SELECT * FROM users WHERE username='$username' AND role='admin' LIMIT 1";
     $result = mysqli_query($conn, $query);
     $user = mysqli_fetch_assoc($result);
+/*
+$sql = "SELECT * FROM users WHERE username=? AND role='admin' LIMIT 1";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();    // alternate code
+    */    
+
 
     if ($user && $password === $user['password']) {
         // Admin is valid, matching password to that username and redirects to destination. 
