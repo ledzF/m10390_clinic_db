@@ -9,7 +9,7 @@ if (!isset($_SESSION['user'])) {
 
 $id = $_GET['id'];
 $sql = "SELECT * FROM patients WHERE id=?";
-$stmt = $conn->prepare($sql);
+$stmt = $conn->prepare($sql);  // from [https://www.w3schools.com/php/php_mysql_prepared_statements.asp]
 $stmt->bind_param("i", $id);
 $stmt->execute();
 $result = $stmt->get_result();
